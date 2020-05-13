@@ -17,11 +17,11 @@ public class GeneralGood extends Good{
         } else if(sellInOfGood < numOfDay && qualityOfGood > sellInOfGood) {
             int result = sellInOfGood - numOfDay;
             super.setSellIn(result);
-            int resultOfQuality = qualityOfGood - sellInOfGood + result * 2;
+            int resultOfQuality = Math.max(qualityOfGood - sellInOfGood + result * 2, 0);
             super.setQuality(resultOfQuality);
-            if (resultOfQuality < 0) super.setQuality(0);
         } else if(qualityOfGood < sellInOfGood) {
-            super.setQuality(qualityOfGood - numOfDay);
+            int resultOfQuality = Math.max((qualityOfGood - numOfDay), 0);
+            super.setQuality(resultOfQuality);
             super.setSellIn(sellInOfGood - numOfDay);
         }
     }
