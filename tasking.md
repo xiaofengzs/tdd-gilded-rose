@@ -14,7 +14,7 @@
 - Given 后台门票SellIn = 20，Quality = 5, when 过去了5天, 更新信息,Then SellIn = 15, Quality = 10
 - Given 后台门票SellIn = 20，Quality = 5, when 过去了12天, 更新信息,Then SellIn = 8, Quality = 19
 - Given 后台门票SellIn = 20，Quality = 5, when 过去了18天, 更新信息,Then SellIn = 2, Quality = 34
-- Given 后台门票SellIn = 20，Quality = 5, when 过去了20天, 更新信息,Then SellIn = 0, Quality = 40 
 - Given 后台门票SellIn = 20，Quality = 5, when 过去了21天, 更新信息,Then SellIn = -1, Quality = 0
+- Given 后台门票SellIn = 20，Quality = 30, when 过去了20天, 更新信息,Then SellIn = 0, Quality = 65 
 
 
