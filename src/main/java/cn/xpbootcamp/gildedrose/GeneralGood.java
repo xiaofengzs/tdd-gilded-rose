@@ -18,6 +18,7 @@ public class GeneralGood extends Good{
             super.setSellIn(result);
             int resultOfQuality = qualityOfGood - sellInOfGood + result * 2;
             super.setQuality(resultOfQuality);
+            if (resultOfQuality < 0) super.setQuality(0);
         }
     }
 }

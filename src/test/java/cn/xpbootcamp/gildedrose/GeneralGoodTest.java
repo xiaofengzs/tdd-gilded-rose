@@ -21,4 +21,12 @@ class GeneralGoodTest {
         assertEquals(-2, generalGood.getSellIn());
         assertEquals(6, generalGood.getQuality());
     }
+
+    @Test
+    void should_set_sell_in_negative_6_and_quality_0_given_general_good_sell_in_20_and_quality_30_when_pass_26_days() {
+        GeneralGood generalGood = new GeneralGood(20, 30);
+        generalGood.update(26);
+        assertEquals(-6, generalGood.getSellIn());
+        assertEquals(0, generalGood.getQuality());
+    }
 }
