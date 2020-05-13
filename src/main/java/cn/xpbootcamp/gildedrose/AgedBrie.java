@@ -7,7 +7,13 @@ public class AgedBrie extends Good {
 
     @Override
     void update(int numOfDay) {
-        super.setSellIn(super.getSellIn() - numOfDay);
-        super.setQuality(super.getQuality() + numOfDay);
+        int quality = super.getQuality();
+        int sellIn = super.getSellIn();
+        if (numOfDay < sellIn) {
+            super.setQuality(quality + numOfDay);
+        }
+        int resultOfSellIn = numOfDay - super.getSellIn();
+        super.setQuality(quality + sellIn + 2 * resultOfSellIn);
+        super.setSellIn(sellIn - numOfDay);
     }
 }
