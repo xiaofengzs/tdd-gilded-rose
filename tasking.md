@@ -2,7 +2,7 @@
 - Given 普通商品SellIn = 20, Quality = 30, When 过去了5天, 更新信息, Then SellIn = 15, Quality = 25
 - Given 普通商品SellIn = 20, Quality = 30, When 过去了22天, 更新信息, Then SellIn = -2, Quality = 6
 - Given 普通商品SellIn = 20, Quality = 30, When 过去了26天, 更新信息, Then SellIn = -6, Quality = 0
-- Given 普通商品SellIn = 20, Quality = 10, When 过去了10天, 更新信息, Then SellIn = 0, Quality = 0
+- Given 普通商品SellIn = 20, Quality = 10, When 过去了10天, 更新信息, Then SellIn = 10, Quality = 0
 - Given 普通商品SellIn = 20, Quality = 10, When 过去了11天, 更新信息, Then SellIn = 9, Quality = 0
 
 - Given 陈年干酪SellIn = 20，Quality = 25, when 过去了10天, 更新信息, Then SellIn = 10, Quality = 35
