@@ -1,20 +1,26 @@
 ## tasks:
-- Given 普通商品SellIn = 20, Quality = 30, When 过去了5天, 更新信息, Then SellIn = 15, Quality = 25
-- Given 普通商品SellIn = 20, Quality = 30, When 过去了22天, 更新信息, Then SellIn = -2, Quality = 6
-- Given 普通商品SellIn = 20, Quality = 30, When 过去了26天, 更新信息, Then SellIn = -6, Quality = 0
-- Given 普通商品SellIn = 20, Quality = 10, When 过去了10天, 更新信息, Then SellIn = 10, Quality = 0
-- Given 普通商品SellIn = 20, Quality = 10, When 过去了11天, 更新信息, Then SellIn = 9, Quality = 0
+- Given 普通商品过期前12天，价值为50，When过了一天，Then 过期前11天，价值为49
+- Given 普通商品过期前10天，价值为20，When过了一天，Then 过期前9天，价值为19
+- Given 普通商品过期前8天，价值为0，When过了一天，Then 过期前8天，价值为0
+- Given 普通商品过期前0天，价值为10，When过了一天，Then 过期前-1天，价值为0 
+- Given 普通商品过期前-5天，价值为5，When过了一天，Then 过期前-6天，价值为3
 
-- Given 陈年干酪SellIn = 20，Quality = 25, when 过去了10天, 更新信息, Then SellIn = 10, Quality = 35
-- Given 陈年干酪SellIn = 20，Quality = 25, when 过去了21天, 更新信息, Then SellIn = -1, Quality = 47
-- Given 陈年干酪SellIn = 20，Quality = 25, when 过去了31天, 更新信息,Then SellIn = -11, Quality = 50
+- Given 陈年干酪过期前15天，价值为15，When过了一天，Then 过期前14天，价值为14
+- Given 陈年干酪过期前15天，价值为50，When了一天，Then 过期前14天，价值为50
+- Given 陈年干酪过期前0天，价值为50，When过了一天，Then 过期前-1天，价值为50
+- Given 陈年干酪过期前-2天，价值为49，When过了一天，Then 过期前-3天，价值为50
+- Given 陈年干酪过期天-5天，价值为5， When过了一天，Then 过期天-6天，价值为6
 
-- Given 萨弗拉斯SellIn = 20，Quality = 30, when 过去了100天, 更新信息,Then SellIn = 120, Quality = 30
+- Given 萨弗拉斯过期前1天，价值为1，When过去了1天，Then 过期前0天，价值为1
+- Given 萨弗拉斯过期前0天，价值为1，When过去了1天，Then 过期前-1天，价值为1
+- Given 萨弗拉斯过期前-2天，价值为1，When过期了1天，Then 过期前-3天，价值为1
     
-- Given 后台门票SellIn = 20，Quality = 5, when 过去了5天, 更新信息,Then SellIn = 15, Quality = 10
-- Given 后台门票SellIn = 20，Quality = 5, when 过去了12天, 更新信息,Then SellIn = 8, Quality = 19
-- Given 后台门票SellIn = 20，Quality = 5, when 过去了18天, 更新信息,Then SellIn = 2, Quality = 34
-- Given 后台门票SellIn = 20，Quality = 5, when 过去了21天, 更新信息,Then SellIn = -1, Quality = 0
-- Given 后台门票SellIn = 20，Quality = 30, when 过去了20天, 更新信息,Then SellIn = 0, Quality = 65 
-
+- Given 后台门票过期前12天，价值为49；When过了一天，Then演出前11天，价值为50
+- Given 后台门票过期前11天，价值为50；When过了一天，Then演出前10天，价值为50
+- Given 后台门票过期前10天，价值为45；When过了一天，Then演出前9天，价值为47
+- Given 后台门票过期前6天，价值为50；When过了一天，Then演出前5天，价值为50
+- Given 后台门票过期前5天，价值为45；When过了一天，Then演出前4天，价值为48
+- Given 后台门票过期前1天，价值为50；When过了一天，Then演出前0天，价值为50
+- Given 后台门票过期前0天，价值为0；When过了一天，Then演出前-1天，价值为0
+- Given 后台门票过期前0天，价值为30；When过了一天，Then演出前-1天，价值为30
 

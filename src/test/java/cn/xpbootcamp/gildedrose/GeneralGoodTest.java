@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class GeneralGoodTest {
 
     @Test
-    void should_set_sell_in_15_and_quality_25_given_general_good_sell_in_20_and_quality_30_when_pass_5_days() {
-        GeneralGood generalGood = new GeneralGood(20, 30);
-        generalGood.update(5);
-        assertEquals(15, generalGood.getSellIn());
-        assertEquals(25, generalGood.getQuality());
+    void should_set_sell_in_11_and_quality_49_given_general_good_sell_in_12_and_quality_50_when_pass_1_days() {
+        GeneralGood generalGood = new GeneralGood(12, 50);
+        generalGood.update(1);
+        assertEquals(11, generalGood.getSellIn());
+        assertEquals(49, generalGood.getQuality());
     }
 
     @Test
