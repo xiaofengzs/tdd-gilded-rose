@@ -53,4 +53,12 @@ class BackstagePassTest {
         assertEquals(0, backstagePass.getSellIn());
         assertEquals(50, backstagePass.getQuality());
     }
+
+    @Test
+    void should_set_sell_in_negative_1_and_quality_0_given_backstage_pass_sell_in_0_and_quality_50_when_pass_1_days() {
+        BackstagePass backstagePass = new BackstagePass(0, 50);
+        backstagePass.update(1);
+        assertEquals(-1, backstagePass.getSellIn());
+        assertEquals(0, backstagePass.getQuality());
+    }
 }
