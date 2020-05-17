@@ -15,11 +15,11 @@ class AgedBrieTest {
     }
 
     @Test
-    void should_set_sell_in_nagetive_1_and_quality_47_given_general_good_sell_in_20_and_quality_25_when_pass_21_days() {
-        AgedBrie agedBrie = new AgedBrie(20, 25);
-        agedBrie.update(21);
-        assertEquals(-1, agedBrie.getSellIn());
-        assertEquals(47, agedBrie.getQuality());
+    void should_set_sell_in_14_and_quality_51_given_general_good_sell_in_15_and_quality_50_when_pass_1_days() {
+        AgedBrie agedBrie = new AgedBrie(15, 51);
+        agedBrie.update(1);
+        assertEquals(14, agedBrie.getSellIn());
+        assertEquals(51, agedBrie.getQuality());
     }
 
     @Test
