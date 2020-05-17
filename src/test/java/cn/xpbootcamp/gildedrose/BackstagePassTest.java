@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class BackstagePassTest {
 
     @Test
-    void should_set_sell_in_15_and_quality_10_given_backstage_pass_sell_in_1_and_quality_1_when_pass_1_days() {
-        BackstagePass backstagePass = new BackstagePass(20, 5);
-        backstagePass.update(5);
-        assertEquals(15, backstagePass.getSellIn());
-        assertEquals(10, backstagePass.getQuality());
+    void should_set_sell_in_1_and_quality_50_given_backstage_pass_sell_in_12_and_quality_49_when_pass_1_days() {
+        BackstagePass backstagePass = new BackstagePass(12, 49);
+        backstagePass.update(1);
+        assertEquals(11, backstagePass.getSellIn());
+        assertEquals(50, backstagePass.getQuality());
     }
 
     @Test
