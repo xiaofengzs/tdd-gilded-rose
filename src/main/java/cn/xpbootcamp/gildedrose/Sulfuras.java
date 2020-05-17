@@ -7,6 +7,6 @@ public class Sulfuras extends Good{
 
     @Override
     void update(int numOfDay) {
-        super.setSellIn(numOfDay + super.getSellIn());
+        super.setSellIn(super.getSellIn() - numOfDay);
     }
 }
