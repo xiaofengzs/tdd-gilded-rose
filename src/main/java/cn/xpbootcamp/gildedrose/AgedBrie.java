@@ -13,7 +13,7 @@ public class AgedBrie extends Good {
             super.setQuality(quality + numOfDay);
         } else {
             int resultOfSellIn = numOfDay - super.getSellIn();
-            super.setQuality(Math.min(quality + sellIn + 2 * resultOfSellIn, 50));
+            super.setQuality(quality + numOfDay);
         }
         super.setSellIn(sellIn - numOfDay);
     }
