@@ -15,7 +15,7 @@ public class BackstagePass extends Good {
         if (resultOfSellIn < 0) {
             super.setQuality(0);
         } else if (resultOfSellIn < 5) {
-            super.setQuality(Math.min(quality + 20  + (5 - resultOfSellIn) * 3, 50));
+            super.setQuality(Math.min(quality + numOfDay * 3, 50));
         } else if (resultOfSellIn < 10) {
             super.setQuality(Math.min(quality + numOfDay * 2, 50));
         } else {
