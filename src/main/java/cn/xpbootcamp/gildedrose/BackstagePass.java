@@ -1,5 +1,7 @@
 package cn.xpbootcamp.gildedrose;
 
+import org.omg.CORBA.MARSHAL;
+
 public class BackstagePass extends Good {
     public BackstagePass(int sellIn, int quality) {
         super(sellIn, quality);
@@ -13,9 +15,9 @@ public class BackstagePass extends Good {
         if (resultOfSellIn < 0) {
             super.setQuality(0);
         } else if (resultOfSellIn < 5) {
-            super.setQuality(quality + 20  + (5 - resultOfSellIn) * 3);
+            super.setQuality(Math.min(quality + 20  + (5 - resultOfSellIn) * 3, 50));
         } else if (resultOfSellIn < 10) {
-            super.setQuality(quality + 10 + (10 - resultOfSellIn) * 2);
+            super.setQuality(Math.min(quality + numOfDay * 2, 50));
         } else {
             super.setQuality(Math.min(super.getQuality() + numOfDay, 50));
         }
