@@ -31,11 +31,11 @@ class GeneralGoodTest {
     }
 
     @Test
-    void should_set_sell_in_10_and_quality_0_given_general_good_sell_in_20_and_quality_10_when_pass_10_days() {
-        GeneralGood generalGood = new GeneralGood(20, 10);
-        generalGood.update(10);
-        assertEquals(10, generalGood.getSellIn());
-        assertEquals(0, generalGood.getQuality());
+    void should_set_sell_in_negative_1_and_quality_0_given_general_good_sell_in_0_and_quality_10_when_pass_1_days() {
+        GeneralGood generalGood = new GeneralGood(0, 10);
+        generalGood.update(1);
+        assertEquals(-1, generalGood.getSellIn());
+        assertEquals(8, generalGood.getQuality());
     }
 
     @Test
